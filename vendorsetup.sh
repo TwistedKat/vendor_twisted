@@ -1,5 +1,5 @@
 add_lunch_combo twisted_grouper-userdebug
 add_lunch_combo twisted_hammerhead-userdebug
-add_lunch_combo twisted_mako-userdebug
 add_lunch_combo twisted_ville-userdebug
+add_lunch_combo twisted_mako-userdebug
 
