@@ -3,7 +3,7 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/slim/sepolicy
+    vendor/twisted/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file.te \
