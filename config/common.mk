@@ -53,7 +53,9 @@ PRODUCT_COPY_FILES += \
 
 # Workaround for NovaLauncher zipalign fails
 PRODUCT_COPY_FILES += \
-    vendor/twisted/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk
+    vendor/twisted/prebuilt/common/app/DashClock.apk:system/app/DashClock.apk \
+    vendor/twisted/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk \
+    vendor/twisted/prebuilt/common/app/Roundr.apk:system/app/Roundr.apk
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
@@ -85,9 +87,8 @@ PRODUCT_PACKAGES += \
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     LatinIME \
-    BluetoothExt \
-    DashClock
-
+    BluetoothExt
+ 
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
