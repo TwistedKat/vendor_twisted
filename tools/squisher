@@ -163,6 +163,8 @@ elif [ "$DEVICEID" = "flo" ]; then
    sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=286/g' $OUT/system/build.prop
 elif [ "$DEVICEID" = "deb" ]; then
    sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=286/g' $OUT/system/build.prop
+elif [ "$DEVICEID" = "ville" ]; then
+   sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=268/g' $OUT/system/build.pr
 fi
 cp -f $OUT/system/build.prop $REPACK/ota/system/build.prop
 
@@ -205,8 +207,8 @@ img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}' `
-echo
-echo -e $CL_BLU" ______  __            "
+echo -e $CL_BLU""
+echo -e "        ______  __            "
 echo -e "       |______|/ /            "
 echo -e "          | | / /             "
 echo -e "          | |/ /              "
