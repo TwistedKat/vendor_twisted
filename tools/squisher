@@ -142,31 +142,14 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 # Fix LCD Density for twisted
 DEVICELCD=`sed -n -e'/ro\.sf\.lcd_density/s/^.*=//p' $OUT/system/build.prop`
 if [ "$DEVICELCD" = "240" ]; then
-   sed -i 's/ro.sf.lcd_density=240/ro.sf.lcd_density=182/g' $OUT/system/build.prop
+   sed -i 's/ro.sf.lcd_density=240/ro.sf.lcd_density=240/g' $OUT/system/build.prop
 elif [ "$DEVICELCD" = "320" ]; then
-    sed -i 's/ro.sf.lcd_density=320/ro.sf.lcd_density=245/g' $OUT/system/build.prop
+    sed -i 's/ro.sf.lcd_density=320/ro.sf.lcd_density=320/g' $OUT/system/build.prop
 elif [ "$DEVICELCD" = "480" ]; then
-    sed -i 's/ro.sf.lcd_density=480/ro.sf.lcd_density=370/g' $OUT/system/build.prop
+    sed -i 's/ro.sf.lcd_density=480/ro.sf.lcd_density=480/g' $OUT/system/build.prop
 elif [ "$DEVICELCD" = "213" ]; then
-    sed -i 's/ro.sf.lcd_density=213/ro.sf.lcd_density=182/g' $OUT/system/build.prop
+    sed -i 's/ro.sf.lcd_density=213/ro.sf.lcd_density=213/g' $OUT/system/build.prop
 fi
-
-# Fix LCD Density for GNote
-DEVICEID=`sed -n -e'/ro\.product\.device/s/^.*=//p' $OUT/system/build.prop`
-if [ "$DEVICEID" = "SGH-I717" ]; then
-   sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=268/g' $OUT/system/build.prop
-elif [ "$DEVICEID" = "GT-N7000" ]; then
-   sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=268/g' $OUT/system/build.prop
-elif [ "$DEVICEID" = "mako" ]; then
-   sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=268/g' $OUT/system/build.prop
-elif [ "$DEVICEID" = "flo" ]; then
-   sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=286/g' $OUT/system/build.prop
-elif [ "$DEVICEID" = "deb" ]; then
-   sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=286/g' $OUT/system/build.prop
-elif [ "$DEVICEID" = "ville" ]; then
-   sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=268/g' $OUT/system/build.pr
-fi
-cp -f $OUT/system/build.prop $REPACK/ota/system/build.prop
 
 # Delete Gallery2 for 5MP cameras
 CAMERARESOLUTION=`sed -n -e'/ro\.camera\.res/s/^.*=//p' $REPACK/ota/system/build.prop`
