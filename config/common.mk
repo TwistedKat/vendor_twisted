@@ -55,7 +55,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/twisted/prebuilt/common/app/DashClock.apk:system/app/DashClock.apk \
     vendor/twisted/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk \
-    vendor/twisted/prebuilt/common/app/Roundr.apk:system/app/Roundr.apk
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
@@ -137,7 +136,7 @@ endif
 # TwistedKat stable releases
 PRODUCT_VERSION_MAJOR = 4.4.2
 PRODUCT_VERSION_MINOR = build
-PRODUCT_VERSION_MAINTENANCE = 2.4
+PRODUCT_VERSION_MAINTENANCE = 2.5
 ifdef TWISTED_BUILD_EXTRA
     TWISTED_POSTFIX := -$(TWISTED_BUILD_EXTRA)
 endif
