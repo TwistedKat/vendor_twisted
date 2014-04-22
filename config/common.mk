@@ -54,10 +54,13 @@ PRODUCT_COPY_FILES += \
 # Workaround for NovaLauncher zipalign fails
 PRODUCT_COPY_FILES += \
     vendor/twisted/prebuilt/common/app/DashClock.apk:system/app/DashClock.apk \
-    vendor/twisted/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk \
+    vendor/twisted/prebuilt/common/app/ApexLauncher_v2.3.1.apk:system/app/ApexLauncher.apk \
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
+
+# T-Mobile theme engine
+include vendor/twisted/config/themes_common.mk
 
 # Required packages
 PRODUCT_PACKAGES += \
@@ -136,7 +139,7 @@ endif
 # TwistedKat stable releases
 PRODUCT_VERSION_MAJOR = 4.4.2
 PRODUCT_VERSION_MINOR = build
-PRODUCT_VERSION_MAINTENANCE = 2.5
+PRODUCT_VERSION_MAINTENANCE = 2.6
 ifdef TWISTED_BUILD_EXTRA
     TWISTED_POSTFIX := -$(TWISTED_BUILD_EXTRA)
 endif
